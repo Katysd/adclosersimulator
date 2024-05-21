@@ -63,7 +63,19 @@ function toclose(element, istart) {
 		hcounted.textContent = "Hight Patience: " + Hiscore;
 	}
 	var parentElement = element.parentNode;
-	parentElement.style.scale = 0;
+	
+	var clos = randomIntFromInterval(1, 3);
+	if (clos == 1) {
+		parentElement.style.scale = "1 0";
+		parentElement.style.transformOrigin = "top";
+	} else if (clos == 2) {
+		parentElement.style.scale = "0 0";
+		parentElement.style.transformOrigin = "center";
+	} else {
+		parentElement.style.scale = "0 1";
+		parentElement.style.transformOrigin = "center";
+	}
+	
 	setTimeout(function() {
 		toOpen(parentElement, element);
 	}, 200);
