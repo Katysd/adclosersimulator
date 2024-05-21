@@ -1,0 +1,83 @@
+:root {
+	--default: black;
+}
+
+body {
+	background-color: black;
+	overflow: hidden;
+	user-select: none;
+	margin: 0px;
+}
+
+#popup {
+	
+	position: absolute;
+    transform-origin: center;
+    width: 10em;
+    height: 12em;
+    background: white;
+    border: solid white 3px;
+	transition: 0.2s;
+	filter: drop-shadow(0px 0px 5px white);
+	scale: 0;
+	
+}
+
+.popuptop {
+	
+	border-bottom: solid white 3px;
+    color: white;
+    padding: 5px;
+    background: #3c3c3c;
+	
+}
+
+.popupafter {
+	
+	pointer-events: none;
+    position: absolute;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    top: 3px;
+    right: 0px;
+    text-align: right;
+    padding-right: 6px;
+	
+}
+
+.imageholder {
+	
+	position: relative;
+    background: url(imgs/ad1.png);
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+	
+}
+
+.scorecounter {
+	
+	position: absolute;
+    color: gold;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: monospace;
+    top: 1em;
+    left: 1em;
+	
+}
+
+.hscorecounter {
+	
+	position: absolute;
+    color: gold;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: monospace;
+    top: 2em;
+    left: 1em;
+	
+}
