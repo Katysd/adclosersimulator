@@ -18,8 +18,26 @@ body {
     background: white;
     border: solid white 3px;
 	transition: 0.2s;
-	filter: drop-shadow(0px 0px 5px white);
+	filter: drop-shadow(0px 0px 3px white);
 	scale: 0;
+	
+}
+
+#sppopup {
+	
+	position: absolute;
+    transform-origin: center;
+    width: 35em;
+    height: 12em;
+    background: white;
+    border: solid white 3px;
+    transition: 0.2s;
+    filter: drop-shadow(0px 0px 3px white);
+    scale: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+	animation: introin 0.5s;
 	
 }
 
@@ -27,8 +45,9 @@ body {
 	
 	border-bottom: solid white 3px;
     color: white;
-    padding: 5px;
+    padding: 7px 5px;
     background: #3c3c3c;
+	font-family: monospace;
 	
 }
 
@@ -79,5 +98,30 @@ body {
     font-family: monospace;
     top: 2em;
     left: 1em;
+}
+
+.animated {
+	animation: blink 0.5s ease-out;
+}
+
+@keyframes blink {
+	0% {color: gold;}
+	50% {color: lime;}
+	100% {color: gold;}
+}
+
+.introtext {
 	
+	color: black;
+    font-size: 1.6em;
+    margin: 5px;
+    font-family: monospace;
+    font-weight: 900;
+	scale: 1;
+	
+}
+
+@keyframes introin {
+	from {scale: 0;}
+	to {scale: 1;}
 }

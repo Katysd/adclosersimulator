@@ -32,13 +32,12 @@ function getRandomWord() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	
-	start();
+	cargarValor();
 	
 })
 
 function start() {
 	
-	cargarValor();
 	const elements = document.querySelectorAll('.popuptop');
 
     // Loop through each element and apply your script
@@ -58,6 +57,9 @@ function toclose(element, istart) {
 		playSound();
 		if (score > Hiscore) {
 			Hiscore = score;
+			hcounted.classList.remove("animated");
+			void hcounted.offsetWidth; // Trigger reflow to restart the animation
+			hcounted.classList.add("animated");
 			guardarValor();
 		}
 		hcounted.textContent = "Hight Patience: " + Hiscore;
@@ -78,6 +80,19 @@ function toclose(element, istart) {
 	
 	setTimeout(function() {
 		toOpen(parentElement, element);
+	}, 200);
+	
+}
+
+function toclosestart(element) {
+	
+	var parentElement = element.parentNode;
+	
+	parentElement.style.transformOrigin = "center";
+	parentElement.style.scale = "0";
+	
+	setTimeout(function() {
+		start();
 	}, 200);
 	
 }
